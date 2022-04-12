@@ -2,37 +2,49 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.products-list {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+  padding: 0 30px;
+  column-gap: 30px;
+  row-gap: 30px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.product {
+  box-shadow: 1px 1px 5px grey;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.product img {
+  max-width: 150px;
+}
+
+.search-bar {
   display: flex;
-  flex-direction: column;
-  align-items: center;
+  align-content: center;
+  align-items: baseline;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.search-bar input,
+.search-bar button {
+  height: 30px;
+  padding: 10px;
+  border: 1px solid #b5b5b5;
+  border-radius: 6px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.search-bar button {
+  min-height: 50px;
+  margin: 0 10px;
+}
+
+.pagination button {
+  font-size: 1.5em;
+  padding: 5px 10px;
+  border: 0;
+  margin: 0 1px;
+}
+
+.pagination button.active {
+  background: red;
 }
